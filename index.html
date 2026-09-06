@@ -24,6 +24,10 @@ a{color:inherit;text-decoration:none}.hero{min-height:92vh;position:relative;dis
 <img src="Screenshot_20260905_040116.jpg"alt="Riddhima and Tanishq">
 <div class="top">♥ &nbsp; For Riddhima</div>
 <div class="music">
+<div class="text"><b>Perfect</b><small>Ed Sheeran</small></div>
+<audio id="mySong"><src="Edd_Sheeran_-_Perfect_(mp3.pm).mp3"></audio>
+<button class="play" onclick="togglePlay()">Play</button>
+</div>
 <div class="text"><b>Bairan</b><small>Anuv Jain</small></div>
 <button class="play" onclick="window.open('https://music.youtube.com/search?q=Bairan%20Anuv%20Jain','_blank')">▶</button>
 </div>
@@ -90,5 +94,14 @@ function forgive(){
  setTimeout(()=>t.classList.remove('show'),2500);
 }
 </script>
+ <script>
+function togglePlay() {
+    var song = document.getElementById("mySong");
+    var btn = document.querySelector(".play");
+    if (song.paused) { song.play(); btn.innerText = "Pause"; } 
+    else { song.pause(); btn.innerText = "Play"; }
+}
+ </script>
+
 </body>
 </html>
